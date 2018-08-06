@@ -1,0 +1,21 @@
+$green: rgba(20, 122, 57, 0.77);
+.shatri-panel{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.shatri-item{
+  flex-basis: 20%;
+  background-color: $green;
+  border: 0;
+  border-radius: 12px;
+  margin: 10px;
+  padding: 10px 12px;
+  min-height:60px;
+  color: #fdfdfd;
+  font-size: 16px;
+  @media(max-width: 520px){
+  flex-basis: 100%;
+}
+}
