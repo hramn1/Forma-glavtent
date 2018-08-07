@@ -10,25 +10,33 @@
 </head>
 <body>
 <div class="container-arenda">
-  <form action="post">
-    <div class="shatri-panel">
-      <button class="shatri-item">Аренда Шатров Пагода</button>
-      <button class="shatri-item">Аренда Сферических шатров</button>
-      <button class="shatri-item">Аренда Мобильных шатров</button>
-      <button class="shatri-item">Аренда Арочных шатров</button>
-      <button class="shatri-item">Аренда Шатров Звезда</button>
-      <button class="shatri-item">Аренда Шатров Паук</button>
-      <button class="shatri-item">Аренда тентов</button>
-    </div>
-    <div class="shatri-choose">
-      <p>Выбрать шатёр</p>
-      <select name="" id=""></select>
-      <label for=""> Количество шатров  </label>
-      <input type="range">
-      <label for="">Количество  дней аренды</label>
-      <input type="range">
-    </div>
+  <form action="post" class="zakaz-forma">
+
   </form>
+    <div class="shatri-panel">
+      <button type="button" class="shatri-item" id="pag">Аренда Шатров Пагода</button>
+      <button type="button" class="shatri-item" id="sfera">Аренда Сферических шатров</button>
+      <button type="button" class="shatri-item" id="mob">Аренда Мобильных шатров</button>
+      <button type="button" class="shatri-item" id="arc">Аренда Арочных шатров</button>
+      <button type="button" class="shatri-item" id="zvezda">Аренда Шатров Звезда</button>
+      <button type="button" class="shatri-item" id="pauk">Аренда Шатров Паук</button>
+      <button type="button" class="shatri-item" id="tent">Аренда тентов</button>
+    </div>
+  <div class="choose-shater">
+
+  </div>
+  <div class="choose-goods">
+    <h2 class="title-goods"></h2>
+      <label for="arenda-range" class="forma-rent__range-label">Количествово дней аренды</label>
+      <input max="30" min="1" name="dayArenda" value="1" id="arenda-range" class="forma-rent__range" type="range">
+      <output name="resultDay" id="day"></output>
+      <input name="light" id="lightCheck" type="checkbox"><label for="lightCheck">Освещение</label>
+      <input name="door1" id="door1Check" type="checkbox"><label for="door1Check">Одностворчатая дверь</label>
+      <input name="floor" id="floorCheck" type="checkbox"><label for="floorCheck">Пол (брус, ламинированная фанера) </label>
+      <input name="carpet" id="carpetCheck" type="checkbox"><label for="carpetCheck">Ковролин </label>
+      <button type="button" id="calkprice" class="btn btn-success btn-lg">Выбрать</button>
+  </div>
 </div>
+<script src="js/forma-zakaza.js"></script>
 </body>
 </html>
