@@ -1,29 +1,29 @@
-input[type=range] 
+input[type=range]
 {
-	-webkit-appearance: none; 
-	width: 650px; 
+	-webkit-appearance: none;
+	width: 90%;
 	height:30px;
 }
-input[type=range]::-webkit-slider-thumb 
+input[type=range]::-webkit-slider-thumb
 {
   -webkit-appearance:none;
 	background-color:transparent;
 }
-input[type=range]:focus 
+input[type=range]:focus
 {
-	outline: none; 
+	outline: none;
 }
 input[type=range]::-ms-track
  {
 	width: 100%;
 	cursor: pointer;
-	background: transparent; 
+	background: transparent;
 	border-color: transparent;
 	color: transparent;
- 
+
 }
 /* Специальные правила для браузеров на движках WebKit/Blink */
-input[type=range]::-webkit-slider-thumb 
+input[type=range]::-webkit-slider-thumb
 {
 	-webkit-appearance: none;
 	border: 8px solid #ffffff;
@@ -32,12 +32,12 @@ input[type=range]::-webkit-slider-thumb
 	border-radius:50%;
 	background: #ababab;
 	cursor: pointer;
-	margin-top: -9px; 
-	box-shadow: 0 2px 1px 0 #cfcfcf; 
+	margin-top: -9px;
+	box-shadow: 0 2px 1px 0 #cfcfcf;
 }
 
 /* Тоже самое для Firefox */
-input[type=range]::-moz-range-thumb 
+input[type=range]::-moz-range-thumb
 {
 	box-shadow: 0 2px 1px 0 #cfcfcf;
     border: 8px solid #ffffff;
@@ -54,24 +54,24 @@ input [type=range]::-ms-thumb
 	box-shadow: 0 2px 1px 0 #cfcfcf;
 	border: 8px solid #ffffff;
 	height: 4px;
-	width: 4px;
+	width: 4px;ё
 	border-radius: 50%;
 	background: #ababab;
 	cursor: pointer;
 }
-input[type=range]::-webkit-slider-runnable-track 
+input[type=range]::-webkit-slider-runnable-track
 {
 	height: 2px;
     cursor: pointer;
     background: #00ca74;
 }
-input[type=range]::-moz-range-track 
+input[type=range]::-moz-range-track
 {
     height: 2px;
     cursor: pointer;
     background: #00ca74;
 }
-input[type=range]::-ms-track 
+input[type=range]::-ms-track
 {
 	height: 2px;
     cursor: pointer;
