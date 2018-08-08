@@ -19,3 +19,54 @@ $green: rgba(20, 122, 57, 0.77);
   flex-basis: 100%;
 }
 }
+.zakaz-forma{
+  display: none;
+}
+.choose-shater{
+  display: none;
+  position: fixed;
+  background-color: #eeeeee;
+  max-width: 600px;
+  padding: 30px 40px;
+  left: 35%;
+  right: 35%;
+  top: 20%;
+  border: 1px solid #232323;
+  border-radius: 12px;
+  box-shadow: 1px 1px 1px 1px #232323;
+  z-index: 10002;
+  & button{
+    display: block;
+    width: 70%;
+    margin-bottom: 10px;
+    border-radius:8px;
+    padding: 12px 20px;
+    color: #fdfdfd;
+    cursor: pointer;
+    margin: 10px auto;
+    background-color: $green;
+  }
+}
+.choose-goods{
+  display: none;
+  position: fixed;
+  background-color: #eeeeee;
+  max-width: 600px;
+  padding: 30px 40px;
+  left: 35%;
+  right: 35%;
+  top: 20%;
+  border: 1px solid #232323;
+  border-radius: 12px;
+  box-shadow: 1px 1px 1px 1px #232323;
+  z-index: 10002;
+}
+.modal-overlay{
+  display: none;
+  top: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1001;
+  background-color: rgba(0,0,0, 0.7);
+}

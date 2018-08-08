@@ -11,7 +11,7 @@
 <body>
 <div class="container-arenda">
   <form action="post" class="zakaz-forma">
-
+    <button>Заказать</button>
   </form>
     <div class="shatri-panel">
       <button type="button" class="shatri-item" id="pag">Аренда Шатров Пагода</button>
@@ -34,9 +34,21 @@
       <input name="door1" id="door1Check" type="checkbox"><label for="door1Check">Одностворчатая дверь</label>
       <input name="floor" id="floorCheck" type="checkbox"><label for="floorCheck">Пол (брус, ламинированная фанера) </label>
       <input name="carpet" id="carpetCheck" type="checkbox"><label for="carpetCheck">Ковролин </label>
-      <button type="button" id="calkprice" class="btn btn-success btn-lg">Выбрать</button>
+      <button type="button" id="choose-btn" class="choose-goods__btn">Выбрать</button>
   </div>
 </div>
+<div class="modal-overlay"></div>
+<template>
+  <div class="goods-zakaz">
+    <h2></h2>
+    <img src="" alt="товар">
+    <p>Количество дней аренды <span></span></p>
+    <p>Количество<span></span></p>
+    <p>Площадь тента</p>
+    <h4>Дополнительные опции</h4>
+    <span ></span>
+  </div>
+</template>
 <script src="js/forma-zakaza.js"></script>
 </body>
 </html>
