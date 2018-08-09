@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container-arenda">
-  <form action="mailto:stmihailov@yandex.ru" method="post" class="zakaz-forma">
+  <form action="" method="post" class="zakaz-forma">
     <label for="zakaz-forma__phone">Телефон:</label>
     <input type="tel" name="zakaz-forma__phone" id="zakaz-forma__phone" required>
     <label for="zakaz-forma__mail">Email:</label>
@@ -30,14 +30,21 @@
   </div>
   <div class="choose-goods">
     <h2 class="title-goods"></h2>
-    <label for="arenda-range" class="forma-rent__range-label">Количествово дней аренды</label>
-    <input max="30" min="1" name="dayArenda" value="1" id="arenda-range" class="forma-rent__range" type="range">
-    <output name="resultDay" id="day"></output>
-    <input name="light" id="lightCheck" type="checkbox"><label for="lightCheck">Освещение</label>
-    <input name="door1" id="door1Check" type="checkbox"><label for="door1Check">Одностворчатая дверь</label>
-    <input name="floor" id="floorCheck" type="checkbox"><label for="floorCheck">Пол (брус, ламинированная фанера) </label>
-    <input name="carpet" id="carpetCheck" type="checkbox"><label for="carpetCheck">Ковролин </label>
-    <button type="button" id="choose-btn" class="choose-goods__btn">Выбрать</button>
+    <label for="arenda-range" class="choose-goods__label">Количествово дней аренды</label>
+    <input max="30" min="1" name="dayArenda" value="1" id="arenda-range" class="choose-goods__range" type="range">
+    <p name="resultDay" id="resultDay">1</p>
+    <label for="arenda-range-kolvo" class="choose-goods__kolvo">Количество</label>
+    <input max="100" min="1" name="dayArenda-kolvo" value="1" id="arenda-range-kolvo" class="choose-goods__range-kolvo" type="range">
+    <p name="resultDayKolvo" id="result-kolvo">1</p>
+    <label class="choose-goods__square-tent" for="square-tent">Площадь тента:</label>
+    <input type="text" id="square-tent">
+    <div class="choose-goods__input-dop">
+      <input name="light" id="lightCheck" type="checkbox"><label for="lightCheck">Освещение</label>
+      <input name="door1" id="door1Check" type="checkbox"><label for="door1Check">Одностворчатая дверь</label>
+      <input name="floor" id="floorCheck" type="checkbox"><label for="floorCheck">Пол (брус, ламинированная фанера) </label>
+      <input name="carpet" id="carpetCheck" type="checkbox"><label for="carpetCheck">Ковролин </label>
+    </div>
+      <button type="button" id="choose-btn" class="choose-goods__btn">Выбрать</button>
   </div>
 </div>
 <div class="modal-overlay"></div>
@@ -45,11 +52,11 @@
   <div class="goods-zakaz">
     <h2></h2>
     <img src="" alt="товар">
-    <p>Количество дней аренды <span></span></p>
+    <p>Количество дней аренды <span class="goods-zakaz__arenda-day"></span></p>
     <p>Количество<span></span></p>
-    <p>Площадь тента</p>
-    <h4>Дополнительные опции</h4>
-    <span></span>
+    <p class="goods-zakaz__square-tent">Площадь тента</p>
+    <h4 >Дополнительные опции</h4>
+    <span class="goods-zakaz__dop"></span>
   </div>
 </template>
 <script src="js/forma-zakaza.js"></script>

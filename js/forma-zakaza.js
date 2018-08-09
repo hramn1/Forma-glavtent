@@ -53,20 +53,35 @@
     }
   }
   function chooseGoods() {
+    let rangeDay = document.querySelector('#arenda-range');
+    let outRange = document.querySelector('#resultDay');
+    let titleGood = document.querySelector('.title-goods');
+    let checkedOption = document.querySelectorAll('input[type="checkbox"]');
+    rangeDay.onchange = function(){
+      outRange.innerText = rangeDay.value
+    };
     moadalChooseShater.style.display = 'none';
     goodDiv.style.display = 'block';
-    let titleGood = document.querySelector('.title-goods');
     titleGood.innerText = this.innerText;
     while (moadalChooseShater.firstChild) {
       moadalChooseShater.removeChild(moadalChooseShater.firstChild);
     }
     btnChoose.onclick = function () {
-      addGoodsInForm(titleGood);
+      let arrDop = [];
+      for (let i = 0; i < checkedOption.length; i++){
+        if(checkedOption[i].checked){
+          arrDop.push(checkedOption[i].nextSibling.innerText)
+        }
+      }
+      addGoodsInForm(titleGood, arrDop, rangeDay);
     }
+
   }
-  function addGoodsInForm(titleGood) {
+  function addGoodsInForm(titleGood, arrDop, rangeDay) {
     let template = document.querySelector('template').content.cloneNode(true);
     template.querySelector('h2').textContent = titleGood.innerText;
+    template.querySelector('.goods-zakaz__arenda-day').textContent = rangeDay.value;
+    template.querySelector('.goods-zakaz__dop').textContent = arrDop;
     modalOver.style.display = 'none';
     goodDiv.style.display = 'none';
     formaZakaza.style.display = 'block';
