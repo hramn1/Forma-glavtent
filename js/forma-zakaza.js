@@ -15,6 +15,9 @@
       else if (shaterChoose[i].id === 'sfera') {
         shaterSfera()
       }
+      else if (shaterChoose[i].id === 'tent') {
+        shaterTent();
+      }
     }
   }
   function shaterPagoda() {
@@ -52,11 +55,37 @@
       buttonChooseShater[i].addEventListener('click', chooseGoods)
     }
   }
+  function shaterTent() {
+    let tent6m = document.createElement('button');
+    let tent8m = document.createElement('button');
+    let tent10m = document.createElement('button');
+    let tent15m = document.createElement('button');
+    let tent20m = document.createElement('button');
+    tent6m.innerText ='Тент шириной 6м';
+    tent8m.innerText ='Тент шириной 8м';
+    tent10m.innerText ='Тент шириной 10м';
+    tent15m.innerText ='Тент шириной 15м';
+    tent20m.innerText ='Тент шириной 20м';
+    moadalChooseShater.style.display = 'block';
+    moadalChooseShater.appendChild(tent6m);
+    moadalChooseShater.appendChild(tent8m);
+    moadalChooseShater.appendChild(tent10m);
+    moadalChooseShater.appendChild(tent15m);
+    moadalChooseShater.appendChild(tent20m);
+    let buttonChooseShater = document.querySelectorAll('.choose-shater button');
+    for (let i = 0; i < buttonChooseShater.length; i++){
+      buttonChooseShater[i].className = "choose-shater__btn"
+      buttonChooseShater[i].addEventListener('click', chooseGoods)
+    }
+  }
   function chooseGoods() {
     let rangeDay = document.querySelector('#arenda-range');
     let outRange = document.querySelector('#resultDay');
     let titleGood = document.querySelector('.title-goods');
     let checkedOption = document.querySelectorAll('input[type="checkbox"]');
+    if(this.className === 'choose-shater__btn'){
+      document.querySelector('.choose-goods__square-tent').style.display = 'block'
+    }
     rangeDay.onchange = function(){
       outRange.innerText = rangeDay.value
     };
@@ -70,7 +99,7 @@
       let arrDop = [];
       for (let i = 0; i < checkedOption.length; i++){
         if(checkedOption[i].checked){
-          arrDop.push(checkedOption[i].nextSibling.innerText)
+          arrDop.push(' ' + checkedOption[i].nextSibling.innerText)
         }
       }
       addGoodsInForm(titleGood, arrDop, rangeDay);
