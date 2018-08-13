@@ -52,8 +52,6 @@ $red: #bc2525;
   display: none;
   position: fixed;
   background-color: #eeeeee;
-  max-width: 800px;
-  min-width: 700px;
   padding: 30px 40px;
   left: 20%;
   right: 20%;
@@ -76,6 +74,8 @@ $red: #bc2525;
   &__input-dop{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px auto;
     & label{
       width: 35%;
       position: relative;

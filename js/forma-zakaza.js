@@ -7,7 +7,7 @@
   let btnChoose = document.querySelector('.choose-goods__btn');
   for (let i = 0; i < shaterChoose.length; i++){
     shaterChoose[i].addEventListener('click', displayShaterChoose);
-    function displayShaterChoose (evt) {
+    function displayShaterChoose () {
       modalOver.style.display = 'block';
       if (shaterChoose[i].id === 'pag'){
         shaterPagoda()
@@ -74,7 +74,7 @@
     moadalChooseShater.appendChild(tent20m);
     let buttonChooseShater = document.querySelectorAll('.choose-shater button');
     for (let i = 0; i < buttonChooseShater.length; i++){
-      buttonChooseShater[i].className = "choose-shater__btn"
+      buttonChooseShater[i].className = "choose-shater__btn";
       buttonChooseShater[i].addEventListener('click', chooseGoods)
     }
   }
@@ -83,11 +83,15 @@
     let outRange = document.querySelector('#resultDay');
     let titleGood = document.querySelector('.title-goods');
     let checkedOption = document.querySelectorAll('input[type="checkbox"]');
-    if(this.className === 'choose-shater__btn'){
-      document.querySelector('.choose-goods__square-tent').style.display = 'block'
-    }
+    let rangeKolvo = document.querySelector('#arenda-range-kolvo');
+    let outKolvo = document.querySelector('#result-kolvo');
+    outRange.innerText = rangeDay.value;
+    outKolvo.innerText = rangeKolvo.value;
     rangeDay.onchange = function(){
       outRange.innerText = rangeDay.value
+    };
+    rangeKolvo.onchange = function(){
+      outKolvo.innerText = rangeKolvo.value
     };
     moadalChooseShater.style.display = 'none';
     goodDiv.style.display = 'block';
@@ -95,22 +99,41 @@
     while (moadalChooseShater.firstChild) {
       moadalChooseShater.removeChild(moadalChooseShater.firstChild);
     }
-    btnChoose.onclick = function () {
-      let arrDop = [];
-      for (let i = 0; i < checkedOption.length; i++){
-        if(checkedOption[i].checked){
-          arrDop.push(' ' + checkedOption[i].nextSibling.innerText)
+    if(this.className === 'choose-shater__btn'){
+      document.querySelector('.choose-goods__square-tent').style.display = 'inline-block';
+      let squareTent = document.querySelector('#square-tent');
+      squareTent.style.display = 'inline-block';
+      btnChoose.onclick = function () {
+        let arrDop = [];
+        for (let i = 0; i < checkedOption.length; i++){
+          if(checkedOption[i].checked){
+            arrDop.push(' ' + checkedOption[i].nextSibling.innerText)
+          }
+        }
+        addGoodsInForm(titleGood, arrDop, rangeDay, rangeKolvo, squareTent);
+      }
+    } else {
+        btnChoose.onclick = function () {
+          let arrDop = [];
+          for (let i = 0; i < checkedOption.length; i++) {
+            if (checkedOption[i].checked) {
+              arrDop.push(' ' + checkedOption[i].nextSibling.innerText)
+            }
+          }
+          addGoodsInForm(titleGood, arrDop, rangeDay, rangeKolvo);
         }
       }
-      addGoodsInForm(titleGood, arrDop, rangeDay);
-    }
-
   }
-  function addGoodsInForm(titleGood, arrDop, rangeDay) {
+  function addGoodsInForm(titleGood, arrDop, rangeDay, rangeKolvo, squareTent) {
     let template = document.querySelector('template').content.cloneNode(true);
+    if(squareTent){
+      template.querySelector('.goods-zakaz__square-tent').style.display = 'block';
+      template.querySelector('.goods-zakaz__square-tent span').innerHTML = squareTent.value;
+    }
     template.querySelector('h2').textContent = titleGood.innerText;
     template.querySelector('.goods-zakaz__arenda-day').textContent = rangeDay.value;
     template.querySelector('.goods-zakaz__dop').textContent = arrDop;
+    template.querySelector('.goods-zakaz__kolvo').textContent = rangeKolvo.value;
     modalOver.style.display = 'none';
     goodDiv.style.display = 'none';
     formaZakaza.style.display = 'block';

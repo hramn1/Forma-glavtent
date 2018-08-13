@@ -37,7 +37,7 @@
     <input max="100" min="1" name="dayArenda-kolvo" value="1" id="arenda-range-kolvo" class="choose-goods__range-kolvo" type="range">
     <p name="resultDayKolvo" id="result-kolvo">1</p>
     <label class="choose-goods__square-tent" for="square-tent">Площадь тента:</label>
-    <input type="text" id="square-tent">
+    <input type="number" min="36" max="9999" id="square-tent">
     <div class="choose-goods__input-dop">
       <input name="light" id="lightCheck" type="checkbox"><label for="lightCheck">Освещение</label>
       <input name="door1" id="door1Check" type="checkbox"><label for="door1Check">Одностворчатая дверь</label>
@@ -53,8 +53,8 @@
     <h2></h2>
     <img src="" alt="товар">
     <p>Количество дней аренды <span class="goods-zakaz__arenda-day"></span></p>
-    <p>Количество<span></span></p>
-    <p class="goods-zakaz__square-tent">Площадь тента</p>
+    <p>Количество <span class="goods-zakaz__kolvo"></span></p>
+    <p class="goods-zakaz__square-tent">Площадь тента: <span></span> м<sup>2</sup></p>
     <h4 >Дополнительные опции</h4>
     <span class="goods-zakaz__dop"></span>
   </div>
