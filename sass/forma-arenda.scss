@@ -126,8 +126,12 @@ $red: #bc2525;
   background-color: rgba(0,0,0, 0.7);
 }
 .goods-zakaz{
+  position: relative;
   &__square-tent{
     display: none;
+  }
+  &__remove{
+    position: absolute;
   }
 }
 .choose-goods__btn{

@@ -18,6 +18,12 @@
       else if (shaterChoose[i].id === 'tent') {
         shaterTent();
       }
+      else if (shaterChoose[i].id === 'mob') {
+        shaterMob()
+      }
+      else if (shaterChoose[i].id === 'arc'){
+        shaterArc()
+      }
     }
   }
   function shaterPagoda() {
@@ -78,6 +84,50 @@
       buttonChooseShater[i].addEventListener('click', chooseGoods)
     }
   }
+  function shaterMob() {
+    let mob16 = document.createElement('button');
+    let mob32 = document.createElement('button');
+    mob16.innerText ='Мобильный шатёр 4*4';
+    mob32.innerText ='мобильный шатёр 4*8';
+    moadalChooseShater.style.display = 'block';
+    moadalChooseShater.appendChild(mob16);
+    moadalChooseShater.appendChild(mob32);
+    let buttonChooseShater = document.querySelectorAll('.choose-shater button');
+    for (let i = 0; i < buttonChooseShater.length; i++){
+      buttonChooseShater[i].addEventListener('click', chooseGoods)
+    }
+  }
+  function shaterArc() {
+    let arc5x5 = document.createElement('button');
+    let arc6x6 = document.createElement('button');
+    let arc8x8 = document.createElement('button');
+    let arc8x8Duna = document.createElement('button');
+    let arc10x10 = document.createElement('button');
+    let arc10x10Duna = document.createElement('button');
+    let arc260 = document.createElement('button');
+    let arcMod = document.createElement('button');
+    arc5x5.innerText ='Арочный Шатёр 5x5';
+    arc6x6.innerText ='Арочный Шатёр 6x6';
+    arc8x8.innerText ='Арочный Шатёр 8x8';
+    arc8x8Duna.innerText ='Арочный Шатёр 8x8 Дюна';
+    arc10x10.innerText ='Арочный Шатёр 10x10';
+    arc10x10Duna.innerText ='Арочный Шатёр 10x10 Дюна';
+    arc260.innerText ='Арочный Шатёр гексагональ 260 кв.м';
+    arcMod.innerText ='Арочный модуль 50 кв.м ';
+    moadalChooseShater.style.display = 'block';
+    moadalChooseShater.appendChild(arc5x5);
+    moadalChooseShater.appendChild(arc6x6);
+    moadalChooseShater.appendChild(arc8x8);
+    moadalChooseShater.appendChild(arc8x8Duna);
+    moadalChooseShater.appendChild(arc10x10);
+    moadalChooseShater.appendChild(arc10x10Duna);
+    moadalChooseShater.appendChild(arc260);
+    moadalChooseShater.appendChild(arcMod);
+    let buttonChooseShater = document.querySelectorAll('.choose-shater button');
+    for (let i = 0; i < buttonChooseShater.length; i++){
+      buttonChooseShater[i].addEventListener('click', chooseGoods)
+    }
+  }
   function chooseGoods() {
     let rangeDay = document.querySelector('#arenda-range');
     let outRange = document.querySelector('#resultDay');
@@ -126,14 +176,22 @@
   }
   function addGoodsInForm(titleGood, arrDop, rangeDay, rangeKolvo, squareTent) {
     let template = document.querySelector('template').content.cloneNode(true);
+    let imgSrc;
     if(squareTent){
       template.querySelector('.goods-zakaz__square-tent').style.display = 'block';
       template.querySelector('.goods-zakaz__square-tent span').innerHTML = squareTent.value;
     }
+    switch(titleGood.innerText){
+      case 'Шатёр Пагода 3 на 3':
+        imgSrc = 'img/pagoda.jpg'
+    }
+    template.querySelector('img').src = imgSrc;
     template.querySelector('h2').textContent = titleGood.innerText;
+
     template.querySelector('.goods-zakaz__arenda-day').textContent = rangeDay.value;
     template.querySelector('.goods-zakaz__dop').textContent = arrDop;
     template.querySelector('.goods-zakaz__kolvo').textContent = rangeKolvo.value;
+
     modalOver.style.display = 'none';
     goodDiv.style.display = 'none';
     formaZakaza.style.display = 'block';
