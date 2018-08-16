@@ -5,24 +5,38 @@
   let modalOver = document.querySelector('.modal-overlay');
   let goodDiv = document.querySelector('.choose-goods');
   let btnChoose = document.querySelector('.choose-goods__btn');
+  const ESC_KEYCODE = 27;
+  function onSuccessEscPress (evt){
+    if (evt.keyCode === ESC_KEYCODE) {
+      evt.preventDefault();
+      window.location.reload();
+      window.removeEventListener('keydown', onSuccessEscPress);
+    }
+  }
   for (let i = 0; i < shaterChoose.length; i++){
     shaterChoose[i].addEventListener('click', displayShaterChoose);
     function displayShaterChoose () {
       modalOver.style.display = 'block';
-      if (shaterChoose[i].id === 'pag'){
+      if (shaterChoose[i].id === 'pag') {
         shaterPagoda()
       }
       else if (shaterChoose[i].id === 'sfera') {
         shaterSfera()
       }
       else if (shaterChoose[i].id === 'tent') {
-        shaterTent();
+        shaterTent()
       }
       else if (shaterChoose[i].id === 'mob') {
         shaterMob()
       }
-      else if (shaterChoose[i].id === 'arc'){
+      else if (shaterChoose[i].id === 'arc') {
         shaterArc()
+      }
+      else if (shaterChoose[i].id === 'pauk') {
+        shaterPauk()
+      }
+      else if (shaterChoose[i].id === 'zvezda') {
+        shaterZvezda()
       }
     }
   }
@@ -41,6 +55,7 @@
     for (let i = 0; i < buttonChooseShater.length; i++){
       buttonChooseShater[i].addEventListener('click', chooseGoods)
     }
+    window.addEventListener('keydown', onSuccessEscPress);
   }
   function shaterSfera() {
     let sfera6d = document.createElement('button');
@@ -128,6 +143,44 @@
       buttonChooseShater[i].addEventListener('click', chooseGoods)
     }
   }
+  function shaterPauk() {
+    let paukd11 = document.createElement('button');
+    let paukd13 = document.createElement('button');
+    let paukd17 = document.createElement('button');
+    let paukd19 = document.createElement('button');
+    let paukd21 = document.createElement('button');
+    let paukd26 = document.createElement('button');
+    paukd11.innerText ='Шатёр Паук D11';
+    paukd13.innerText ='Шатёр Паук D13';
+    paukd17.innerText ='Шатёр Паук D17';
+    paukd19.innerText ='Шатёр Паук D19';
+    paukd21.innerText ='Шатёр Паук D21';
+    paukd26.innerText ='Шатёр Паук D26';
+    moadalChooseShater.style.display = 'block';
+    moadalChooseShater.appendChild(paukd11);
+    moadalChooseShater.appendChild(paukd13);
+    moadalChooseShater.appendChild(paukd17);
+    moadalChooseShater.appendChild(paukd19);
+    moadalChooseShater.appendChild(paukd21);
+    moadalChooseShater.appendChild(paukd26);
+    let buttonChooseShater = document.querySelectorAll('.choose-shater button');
+    for (let i = 0; i < buttonChooseShater.length; i++){
+      buttonChooseShater[i].addEventListener('click', chooseGoods)
+    }
+  }
+  function shaterZvezda() {
+    let zvezda10d = document.createElement('button');
+    let zvezda12d = document.createElement('button');
+    zvezda10d.innerText ='Шатёр Звезда D10';
+    zvezda12d.innerText ='Шаётр Звезда D12';
+    moadalChooseShater.style.display = 'block';
+    moadalChooseShater.appendChild(zvezda10d);
+    moadalChooseShater.appendChild(zvezda12d);
+    let buttonChooseShater = document.querySelectorAll('.choose-shater button');
+    for (let i = 0; i < buttonChooseShater.length; i++){
+      buttonChooseShater[i].addEventListener('click', chooseGoods)
+    }
+  }
   function chooseGoods() {
     let rangeDay = document.querySelector('#arenda-range');
     let outRange = document.querySelector('#resultDay');
@@ -187,14 +240,13 @@
     }
     template.querySelector('img').src = imgSrc;
     template.querySelector('h2').textContent = titleGood.innerText;
-
     template.querySelector('.goods-zakaz__arenda-day').textContent = rangeDay.value;
     template.querySelector('.goods-zakaz__dop').textContent = arrDop;
     template.querySelector('.goods-zakaz__kolvo').textContent = rangeKolvo.value;
-
     modalOver.style.display = 'none';
     goodDiv.style.display = 'none';
     formaZakaza.style.display = 'block';
     formaZakaza.appendChild(template);
+    window.removeEventListener('keydown', onSuccessEscPress);
   }
 })();
