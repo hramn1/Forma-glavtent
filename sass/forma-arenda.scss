@@ -15,6 +15,7 @@ $red: #bc2525;
   padding: 10px 12px;
   min-height:60px;
   color: #fdfdfd;
+  cursor: pointer;
   font-size: 16px;
   @media(max-width: 520px){
   flex-basis: 100%;
@@ -22,6 +23,7 @@ $red: #bc2525;
 }
 .zakaz-forma{
   display: none;
+  flex-wrap: wrap;
 }
 .choose-shater{
   display: none;
@@ -70,6 +72,7 @@ $red: #bc2525;
   }
   &__square-tent{
     display: none;
+    margin:10px 5px 12px 15px;
   }
   &__input-dop{
     display: flex;
@@ -101,8 +104,38 @@ $red: #bc2525;
 .choose-goods__input-dop input:checked + label::before{
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.7) 9px, rgba(255, 255, 255, 0) 10px);
 }
+.goods-items{
+  flex-basis: 50%;
+  margin: 20px auto;
+  padding: 20px 30px;
+  order:5;
+  & label {
+    width: 35%;
+    display: inline-block;
+    margin: 10px auto;
+  }
+  & input {
+    background-color: #ababab;
+    border: 0;
+    padding: 5px 10px;
+  }
+  & button {
+    display: block;
+    width: 225px;
+    max-width: 100%;
+    padding: 10px 15px;
+    color: #fdfdfd;
+    border: 0;
+    background-color: #bc2525;
+    margin: 15px auto;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
 #square-tent{
   display: none;
+  width: 50px;
+  padding: 0;
 }
 #resultDay{
   color: $red;
@@ -127,11 +160,32 @@ $red: #bc2525;
 }
 .goods-zakaz{
   position: relative;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 7px 0px #232323;
+  flex-basis: 45%;
+  h2 {
+    font-size: 18px;
+  }
+  & span {
+    color: $red;
+  }
+  & img {
+    width: 150px;
+  }
   &__square-tent{
     display: none;
   }
   &__remove{
     position: absolute;
+    background-image: url(/img/times.svg);
+    width: 17px;
+    height: 23px;
+    border: 0;
+    top: 19px;
+    right: 20px;
+    cursor: pointer;
   }
 }
 .choose-goods__btn{
