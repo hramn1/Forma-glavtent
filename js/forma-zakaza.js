@@ -272,7 +272,7 @@
         imgSrc = 'img/arc8.jpg';
         break;
       case 'Арочный Шатёр 8x8 Дюна':
-        imgSrc = 'img/duna8.jpg';
+        imgSrc = 'img/dyna8.jpg';
         break;
       case 'Арочный Шатёр 10x10':
         imgSrc = 'img/arc10.jpg';
