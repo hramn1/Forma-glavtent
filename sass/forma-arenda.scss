@@ -203,3 +203,21 @@ $red: #bc2525;
     opacity: 0.6;
   }
 }
+.arenda-title{
+  text-align: center;
+}
+.item-panel{
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &__btn{
+    background-color: $green;
+    margin: 10px 20px;
+    padding: 5px 20px;
+    color: #fdfdfd;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+}

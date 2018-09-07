@@ -5,6 +5,7 @@
   let modalOver = document.querySelector('.modal-overlay');
   let goodDiv = document.querySelector('.choose-goods');
   let btnChoose = document.querySelector('.choose-goods__btn');
+  let itemChoose = document.querySelectorAll('.item-panel__btn');
   const ESC_KEYCODE = 27;
   function onSuccessEscPress (evt){
     if (evt.keyCode === ESC_KEYCODE) {
@@ -39,6 +40,16 @@
         shaterZvezda()
       }
     }
+  }
+  for (let k = 0; k < itemChoose.length; k++){
+    itemChoose[k].addEventListener('click', displayItem);
+    function displayItem (){
+      let titleItem = this.innerText;
+      modalOver.style.display = 'block';
+    }
+  }
+  function chooseItem() {
+
   }
   function shaterPagoda() {
     let pagoda9 = document.createElement('button');
@@ -181,7 +192,7 @@
       buttonChooseShater[i].addEventListener('click', chooseGoods)
     }
   }
-  function chooseGoods() {
+  function chooseGoods(this) {
     let rangeDay = document.querySelector('#arenda-range');
     let outRange = document.querySelector('#resultDay');
     let titleGood = document.querySelector('.title-goods');
