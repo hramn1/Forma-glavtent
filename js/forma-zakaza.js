@@ -192,7 +192,7 @@
       buttonChooseShater[i].addEventListener('click', chooseGoods)
     }
   }
-  function chooseGoods(this) {
+  function chooseGoods() {
     let rangeDay = document.querySelector('#arenda-range');
     let outRange = document.querySelector('#resultDay');
     let titleGood = document.querySelector('.title-goods');
