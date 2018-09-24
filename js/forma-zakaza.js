@@ -6,6 +6,7 @@
   let goodDiv = document.querySelector('.choose-goods');
   let btnChoose = document.querySelector('.choose-goods__btn');
   let itemChoose = document.querySelectorAll('.item-panel__btn');
+  let itemDiv = document.querySelector('.choose-items');
   const ESC_KEYCODE = 27;
   function onSuccessEscPress (evt){
     if (evt.keyCode === ESC_KEYCODE) {
@@ -46,10 +47,10 @@
     function displayItem (){
       let titleItem = this.innerText;
       modalOver.style.display = 'block';
+      itemDiv.style.display = 'block';
     }
   }
   function chooseItem() {
-
   }
   function shaterPagoda() {
     let pagoda9 = document.createElement('button');

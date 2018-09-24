@@ -50,7 +50,7 @@ $red: #bc2525;
     background-color: $green;
   }
 }
-.choose-goods{
+.choose-goods, .choose-items{
   display: none;
   position: fixed;
   background-color: #eeeeee;
@@ -143,7 +143,7 @@ $red: #bc2525;
   display: inline-block;
   vertical-align: bottom;
 }
-#result-kolvo{
+#result-kolvo, #result-kolvo-items{
   color: $red;
   margin: 0 10px 10px;
   display: inline-block;
@@ -188,7 +188,7 @@ $red: #bc2525;
     cursor: pointer;
   }
 }
-.choose-goods__btn{
+.choose-goods__btn, .choose-items__btn{
   display: block;
   max-width: 240px;
   margin: 20px auto 10px;
