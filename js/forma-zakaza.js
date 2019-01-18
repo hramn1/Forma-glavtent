@@ -257,7 +257,7 @@
         imgSrc = 'img/pagoda64.jpg';
         break;
       case 'Шатёр Сфера диаметром 6 метров':
-        imgSrc = 'img/sfera6.jpg';
+        imgSrc = 'img/sfera6.jpeg';
         break;
       case 'Шатёр Сфера диаметром 8 метров':
         imgSrc = 'img/sfera8.jpg';
