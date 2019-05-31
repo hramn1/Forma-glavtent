@@ -12,7 +12,7 @@ let svgstore = require("gulp-svgstore");
 let svgmin = require("gulp-svgmin");
 
 gulp.task("images", function() {
-    return gulp.src("img/**/*.{png,jpg,gif,svg}")
+    return gulp.src("img/**/*.{png,jpg,gif,svg,jpeg}")
         .pipe(imagemin([
             imagemin.optipng({optimizationLevel: 3})
         ]))

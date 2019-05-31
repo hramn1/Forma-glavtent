@@ -45,12 +45,28 @@
   for (let k = 0; k < itemChoose.length; k++){
     itemChoose[k].addEventListener('click', displayItem);
     function displayItem (){
-      let titleItem = this.innerText;
+      let titleItem = document.querySelector('.title-items');
+      let btnChooseGoods = document.querySelector('#choose-btn-items');
+      let rangeDay = document.querySelector('#arenda-range-items');
+      let outRange = document.querySelector('#resultDayItem');
+      let rangeKolvo = document.querySelector('#arenda-range-kolvo-items');
+      let outKolvo = document.querySelector('#result-kolvo-items');
+      titleItem.innerText = this.innerText;
+      outRange.innerText = rangeDay.value;
+      outKolvo.innerText = rangeKolvo.value;
+      rangeDay.onchange = function(){
+        outRange.innerText = rangeDay.value
+      };
+      rangeKolvo.onchange = function(){
+        outKolvo.innerText = rangeKolvo.value
+      };
       modalOver.style.display = 'block';
       itemDiv.style.display = 'block';
+      btnChooseGoods.onclick = function () {
+        addGoodsInForm(titleItem, '', rangeDay, rangeKolvo, '');
+        itemDiv.style.display = 'none';
+      };
     }
-  }
-  function chooseItem() {
   }
   function shaterPagoda() {
     let pagoda9 = document.createElement('button');
@@ -337,6 +353,39 @@
       case 'Тент шириной 20м':
         imgSrc = 'img/tent20.jpg';
         break;
+      case 'Ярмарочный киоск 3x3':
+        imgSrc = 'img/y-k.jpg';
+        break;
+      case 'Ярмарочный киоск 3x2':
+        imgSrc = 'img/y-k.jpg';
+        break;
+      case 'Ярмарочный киоск 2x2':
+        imgSrc = 'img/y-k.jpg';
+        break;
+      case 'Ярмарочный киоск 3x3':
+        imgSrc = 'img/y-k.jpg';
+        break;
+      case 'Ярмарочный киоск 3x2':
+        imgSrc = 'img/y-k.jpg';
+        break;
+      case 'Ярмарочный домик 3x3':
+        imgSrc = 'yarm1.jpg';
+        break;
+      case 'Аренда пола брус ламинированная фанера':
+        imgSrc = 'img/pol1.jpg';
+        break;
+      case 'Аренда ковролина с защитной плёнкой':
+        imgSrc = 'img/pol2.jpg';
+        break;
+      case 'Аренда газонной травы':
+        imgSrc = 'img/pol3.jpg';
+        break;
+      case 'Аренда ковролина':
+        imgSrc = 'img/pol4.jpg';
+        break;
+      case 'Аренда выравнивающего пола':
+        imgSrc = 'img/pol5.jpg';
+        break;
     }
     template.querySelector('img').src = imgSrc;
     template.querySelector('h2').textContent = titleGood.innerText;
@@ -348,11 +397,33 @@
     formaZakaza.style.display = 'flex';
     formaZakaza.appendChild(template);
     window.removeEventListener('keydown', onSuccessEscPress);
+    removeDublicate();
     let btnRemoveItem = document.querySelectorAll('.goods-zakaz__remove');
     for (let i = 0; i < btnRemoveItem.length; i++) {
       btnRemoveItem[i].onclick = function removeItem() {
         this.parentNode.remove()
       }
+    }
+  }
+  function removeDublicate(){
+    let tovar = document.querySelectorAll('.goods-zakaz');
+    let arrGoods = [];
+    for (let i = 0; i < tovar.length; i++){
+      let titleTovar = tovar[i].querySelector('.goods-zakaz__title');
+      arrGoods.push(titleTovar);
+      if (arrGoods.length >= 2) {
+        for (let k = 1; k < arrGoods.length; k++) {
+          if (arrGoods[k].textContent == arrGoods[k - 1].textContent) {
+            arrGoods[k - 1].parentNode.querySelector('.goods-zakaz__arenda-day').textContent = (arrGoods[k - 1].parentNode.querySelector('.goods-zakaz__arenda-day').textContent * 1) + (tovar[i].querySelector('.goods-zakaz__arenda-day').textContent * 1);
+            console.log(arrGoods[k - 1].parentNode);
+            tovar[i].remove()
+          }
+        }
+      }
+      // if(titleTovar.textContent == titleTovar.textContent){
+      //   alert('true')
+      //    }
+
     }
   }
 })();

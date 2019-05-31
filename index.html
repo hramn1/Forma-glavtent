@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container-arenda">
-    <form action="" method="post" class="zakaz-forma">
+    <form action="/arenda.php" method="post" class="zakaz-forma">
       <div class="goods-items">
         <label for="zakaz-forma__phone">Телефон:</label>
         <input type="tel" name="zakaz-forma__phone" id="zakaz-forma__phone" required>
@@ -205,10 +205,10 @@
     <h2 class="title-goods"></h2>
     <label for="arenda-range" class="choose-goods__label">Количествово дней аренды</label>
     <input max="30" min="1" name="dayArenda" value="1" id="arenda-range" class="choose-goods__range" type="range">
-    <p name="resultDay" id="resultDay">1</p>
+    <p  id="resultDay">1</p>
     <label for="arenda-range-kolvo" class="choose-goods__kolvo">Количество</label>
     <input max="100" min="1" name="dayArenda-kolvo" value="1" id="arenda-range-kolvo" class="choose-goods__range-kolvo" type="range">
-    <p name="resultDayKolvo" id="result-kolvo">1</p>
+    <p id="result-kolvo">1</p>
     <label class="choose-goods__square-tent" for="square-tent">Площадь тента:</label>
     <input type="number" min="36" max="9999" id="square-tent">
     <div class="choose-goods__input-dop">
@@ -223,17 +223,17 @@
     <h2 class="title-items"></h2>
     <label for="arenda-range-items" class="choose-items__label">Количествово дней аренды</label>
     <input max="30" min="1" name="dayArenda" value="1" id="arenda-range-items" class="choose-goods__range" type="range">
-    <p name="resultDay" id="resultDay">1</p>
+    <p  id="resultDayItem">1</p>
     <label for="arenda-range-kolvo-items" class="choose-goods__kolvo">Количество</label>
     <input max="100" min="1" name="dayArenda-kolvo" value="1" id="arenda-range-kolvo-items" class="choose-goods__range-kolvo" type="range">
-    <p name="resultDayKolvo" id="result-kolvo-items">1</p>
+    <p  id="result-kolvo-items">1</p>
     <button type="button" id="choose-btn-items" class="choose-items__btn">Выбрать</button>
   </div>
 </div>
 <div class="modal-overlay"></div>
 <template>
   <div class="goods-zakaz">
-    <h2></h2>
+    <h2 class="goods-zakaz__title"></h2>
     <img src="" alt="товар">
     <p>Количество дней аренды <span class="goods-zakaz__arenda-day"></span></p>
     <p>Количество <span class="goods-zakaz__kolvo"></span></p>
