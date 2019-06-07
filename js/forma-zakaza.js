@@ -244,7 +244,7 @@
         addGoodsInForm(titleGood, arrDop, rangeDay, rangeKolvo, squareTent);
       }
     } else {
-        btnChoose.onclick = function () {
+      btnChoose.onclick = function () {
           let arrDop = [];
           for (let i = 0; i < checkedOption.length; i++) {
             if (checkedOption[i].checked) {
@@ -410,19 +410,20 @@
     let arrGoods = [];
     for (let i = 0; i < tovar.length; i++){
       let titleTovar = tovar[i].querySelector('.goods-zakaz__title');
-      arrGoods.push(titleTovar);
+       arrGoods.push(titleTovar);
+
       if (arrGoods.length >= 2) {
-        for (let k = 1; k < arrGoods.length; k++) {
-          if (arrGoods[k].textContent == arrGoods[k - 1].textContent) {
-            arrGoods[k - 1].parentNode.querySelector('.goods-zakaz__arenda-day').textContent = (arrGoods[k - 1].parentNode.querySelector('.goods-zakaz__arenda-day').textContent * 1) + (tovar[i].querySelector('.goods-zakaz__arenda-day').textContent * 1);
-            console.log(arrGoods[k - 1].parentNode);
-            tovar[i].remove()
+        for (let k = 0; k < arrGoods.length; k++) {
+          for (let j = k + 1; j < arrGoods.length; j++){
+          if (arrGoods[k].textContent == arrGoods[j].textContent) {
+            arrGoods[k].parentNode.querySelector('.goods-zakaz__arenda-day').textContent = (arrGoods[j].parentNode.querySelector('.goods-zakaz__arenda-day').textContent * 1) + (arrGoods[k].parentNode.querySelector('.goods-zakaz__arenda-day').textContent * 1);
+            arrGoods[k].parentNode.querySelector('.goods-zakaz__kolvo').textContent = (arrGoods[j].parentNode.querySelector('.goods-zakaz__kolvo').textContent * 1) + (arrGoods[k].parentNode.querySelector('.goods-zakaz__kolvo').textContent * 1);
+            tovar[k].querySelector('.goods-zakaz__dop').textContent = tovar[tovar.length-1].querySelector('.goods-zakaz__dop').textContent
+            tovar[tovar.length-1].remove()
+          }
           }
         }
       }
-      // if(titleTovar.textContent == titleTovar.textContent){
-      //   alert('true')
-      //    }
 
     }
   }
