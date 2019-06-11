@@ -386,6 +386,14 @@
       case 'Аренда выравнивающего пола':
         imgSrc = 'img/pol5.jpg';
         break;
+      case 'Аренда сцен и порталов':
+        imgSrc = 'img/scena-arenda.jpg';
+        break;
+      case 'Аренда Подиума':
+        imgSrc = 'img/podium.jpg';
+        break;
+      default:
+        imgSrc = 'img/noimage.png';
     }
     template.querySelector('img').src = imgSrc;
     template.querySelector('h2').textContent = titleGood.innerText;

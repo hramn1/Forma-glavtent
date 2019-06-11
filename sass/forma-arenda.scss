@@ -72,7 +72,7 @@ $red: #bc2525;
   }
   &__square-tent{
     display: none;
-    margin:10px 5px 12px 15px;
+    margin:10px 5px 12px 35px;
   }
   &__input-dop{
     display: flex;
@@ -216,6 +216,7 @@ $red: #bc2525;
     margin: 10px 20px;
     padding: 5px 20px;
     color: #fdfdfd;
+    flex-basis: 20%;
     border: none;
     border-radius: 7px;
     cursor: pointer;
