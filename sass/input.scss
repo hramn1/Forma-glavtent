@@ -1,20 +1,20 @@
-input[type=range]
+.choose-items input[type=range]
 {
 	-webkit-appearance: none;
 	width: 80%;
 	height:30px;
 	background: transparent;
 }
-input[type=range]::-webkit-slider-thumb
+.choose-items input[type=range]::-webkit-slider-thumb
 {
   -webkit-appearance:none;
 	background-color:transparent;
 }
-input[type=range]:focus
+.choose-items input[type=range]:focus
 {
 	outline: none;
 }
-input[type=range]::-ms-track
+.choose-items input[type=range]::-ms-track
  {
 	width: 100%;
 	cursor: pointer;
@@ -24,7 +24,7 @@ input[type=range]::-ms-track
 
 }
 /* Специальные правила для браузеров на движках WebKit/Blink */
-input[type=range]::-webkit-slider-thumb
+.choose-items input[type=range]::-webkit-slider-thumb
 {
 	-webkit-appearance: none;
 	border: 8px solid #ffffff;
@@ -38,7 +38,7 @@ input[type=range]::-webkit-slider-thumb
 }
 
 /* Тоже самое для Firefox */
-input[type=range]::-moz-range-thumb
+.choose-items input[type=range]::-moz-range-thumb
 {
 	box-shadow: 0 2px 1px 0 #cfcfcf;
     border: 8px solid #ffffff;
@@ -50,7 +50,7 @@ input[type=range]::-moz-range-thumb
 }
 
 /* Тоже самое для IE */
-input [type=range]::-ms-thumb
+.choose-items input [type=range]::-ms-thumb
  {
 	box-shadow: 0 2px 1px 0 #cfcfcf;
 	border: 8px solid #ffffff;
@@ -60,21 +60,102 @@ input [type=range]::-ms-thumb
 	background: #ababab;
 	cursor: pointer;
 }
-input[type=range]::-webkit-slider-runnable-track
+.choose-items input[type=range]::-webkit-slider-runnable-track
 {
 	height: 2px;
     cursor: pointer;
     background: #00ca74;
 }
-input[type=range]::-moz-range-track
+.choose-items input[type=range]::-moz-range-track
 {
     height: 2px;
     cursor: pointer;
     background: #00ca74;
 }
-input[type=range]::-ms-track
+.choose-items input[type=range]::-ms-track
 {
 	height: 2px;
     cursor: pointer;
     background: #00ca74;
 }
+//
+.choose-goods input[type=range]
+{
+	-webkit-appearance: none;
+	width: 80%;
+	height:30px;
+	background: transparent;
+}
+.choose-goods input[type=range]::-webkit-slider-thumb
+{
+	-webkit-appearance:none;
+	background-color:transparent;
+}
+.choose-goods input[type=range]:focus
+{
+	outline: none;
+}
+.choose-goods input[type=range]::-ms-track
+{
+	width: 100%;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+
+}
+/* Специальные правила для браузеров на движках WebKit/Blink */
+.choose-goods input[type=range]::-webkit-slider-thumb
+{
+	-webkit-appearance: none;
+	border: 8px solid #ffffff;
+	height: 20px;
+	width: 20px;
+	border-radius:50%;
+	background: #ababab;
+	cursor: pointer;
+	margin-top: -9px;
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+/* Тоже самое для Firefox */
+.choose-goods input[type=range]::-moz-range-thumb
+{
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+	border: 8px solid #ffffff;
+	height: 4px;
+	width: 4px;
+	border-radius: 50%;
+	background: #ababab;
+	cursor: pointer;
+}
+
+/* Тоже самое для IE */
+.choose-goods input [type=range]::-ms-thumb
+{
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+	border: 8px solid #ffffff;
+	height: 4px;
+	width: 4px;
+	border-radius: 50%;
+	background: #ababab;
+	cursor: pointer;
+}
+.choose-goods input[type=range]::-webkit-slider-runnable-track
+{
+	height: 2px;
+	cursor: pointer;
+	background: #00ca74;
+}
+.choose-goods input[type=range]::-moz-range-track
+{
+	height: 2px;
+	cursor: pointer;
+	background: #00ca74;
+}
+.choose-goods input[type=range]::-ms-track {
+	height: 2px;
+	cursor: pointer;
+	background: #00ca74;
+}
+

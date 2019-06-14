@@ -392,6 +392,48 @@
       case 'Аренда Подиума':
         imgSrc = 'img/podium.jpg';
         break;
+      case 'Стол коктейльный d 70 см':
+        imgSrc = 'img/kokt-stol.jpg';
+        break;
+      case 'Стол прямоугольный 180х80':
+        imgSrc = 'img/stol-pram.jpg';
+        break;
+      case 'Стол пластиковый круглый':
+        imgSrc = 'img/stol-plastikoviy.jpg';
+        break;
+      case 'Пивной комплект':
+        imgSrc = 'img/beer-komplect.jpg';
+        break;
+      case 'Стол деревянный пивной 180х60':
+        imgSrc = 'img/beer-table.jpg';
+        break;
+      case 'Стол круглый D 180 см':
+        imgSrc = 'img/stol-d-180.jpg';
+        break;
+      case 'Стол прямоугольный 120х60':
+        imgSrc = 'img/stol-120x60.jpg';
+        break;
+      case 'Стол журнальный 45х45х50':
+        imgSrc = 'img/stolik1.jpg';
+        break;
+      case 'Стол круглый d 90 см':
+        imgSrc = 'img/stolD-90.jpg';
+        break;
+      case 'Стол круглый D 150 см':
+        imgSrc = 'img/stol-d-150.jpg';
+        break;
+      case 'Аренда стандартного стула':
+        imgSrc = 'img/stul-stndart.jpg';
+        break;
+      case 'Аренда складной скамьи':
+        imgSrc = 'img/skamya.jpg';
+        break;
+      case 'Аренда пластикового стула':
+        imgSrc = 'img/plastic-stul.png';
+        break;
+      case 'Аренда банкетного стула':
+        imgSrc = 'img/banket-stul.jpg';
+        break;
       default:
         imgSrc = 'img/noimage.png';
     }

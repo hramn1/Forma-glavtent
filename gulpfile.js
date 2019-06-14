@@ -31,15 +31,14 @@ gulp.task("symbols", function() {
 
 
 
-gulp.task("style", function() {
+gulp.task("style",  function() {
     return  gulp.src("sass/style.scss", { allowEmpty: true })
+        .pipe(server.stream())
         .pipe(plumber())
         .pipe(sass())
-        .pipe(gulp.dest("build/css"))
          .pipe(minify())
          .pipe(rename("style.min.css"))
-         .pipe(gulp.dest("build/css"))
-         .pipe(server.stream());
+         .pipe(gulp.dest("build/css"));
 });
 gulp.task('scripts', function(){
     return gulp.src("js/*.js")
