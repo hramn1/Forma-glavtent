@@ -434,6 +434,103 @@
       case 'Аренда банкетного стула':
         imgSrc = 'img/banket-stul.jpg';
         break;
+      case 'Стрейч наперон на коктейльный стол':
+        imgSrc = 'img/stretch-koktelniyStol.jpg';
+        break;
+      case 'Стрейч чехол на коктейльный стол':
+        imgSrc = 'img/stretch-koktelniy.jpg';
+        break;
+      case 'Бант на стул':
+        imgSrc = 'img/bant-na-stul.jpg';
+        break;
+      case 'Стрейч чехол на стол прямоугольный':
+        imgSrc = 'img/chehol-pryamougolnie.jpg';
+        break;
+      case 'Скатерть круглая d-270':
+        imgSrc = 'img/skatert-d270.jpg';
+        break;
+      case 'Салфетка 45х45':
+        imgSrc = 'img/salfetka45x45.jpg';
+        break;
+      case 'Шапочка на стул':
+        imgSrc = 'img/shapochka-na-stul.jpg';
+        break;
+      case 'Стрейч чехол на круглый стол':
+        imgSrc = 'img/stretch.jpg';
+        break;
+      case 'Фуршетная юбка 5м':
+        imgSrc = 'img/furshtnaya-ubka.jpg';
+        break;
+      case 'Скатерть круглая d-300':
+        imgSrc = 'img/skatert-krugkaya.jpg';
+        break;
+      case 'Чехол на стул универсальный':
+        imgSrc = 'img/chehuniv2.jpg';
+        break;
+      case 'Скатерть прямоугольная 150х250см':
+        imgSrc = 'img/skatpryam.jpg';
+        break;
+      case 'Чехол на стул':
+        imgSrc = 'img/chehol1.jpg';
+        break;
+      case 'Скатерть квадратная 150х150':
+        imgSrc = 'img/skatert-kvadrat.jpg';
+        break;
+      case 'Скатерть на коктейльный стол':
+        imgSrc = 'img/cocktail-scatert.jpeg';
+        break;
+      case 'Стрейч чехол на стул':
+        imgSrc = 'img/stretch-stul.jpg';
+        break;
+      case 'Аренда крёсел-мешков':
+        imgSrc = 'img/kreslo-meshok.jpg';
+        break;
+      case 'Аренда кресла из кожзама':
+        imgSrc = 'img/kreslo.jpg';
+        break;
+      case 'Аренда 2-x местного дивана':
+        imgSrc = 'img/divan-2-mestniy.jpg';
+        break;
+      case 'Аренда 3-х местного дивана':
+        imgSrc = 'img/arenda-divan.jpg';
+        break;
+      case 'Аренда Фан-барьеров':
+        imgSrc = 'img/fan-barier.jpg';
+        break;
+      case 'Аренда оградительных столбиков с вытяжной лентой':
+        imgSrc = 'img/ograditelnie-stolbiki-lenta.jpg';
+        break;
+      case 'Аренда оградительных столбиков':
+        imgSrc = 'img/ograditelnie_stilbiki.jpg';
+        break;
+      case 'Аренда мобильных заборов':
+        imgSrc = 'img/mobilnie-zabori.jpg';
+        break;
+      case 'Аренда офисных мобильных перегородок':
+        imgSrc = 'img/arenda-mobilnih-peregorodok.jpg';
+        break;
+      case 'Кулер напольный':
+        imgSrc = 'img/cooler-napolniy.jpg';
+        break;
+      case 'Аренда выездного гардероба':
+        imgSrc = 'img/arenda-viezdnogo-garderoba.jpg';
+        break;
+      case 'Аренда зеркала':
+        imgSrc = 'img/arenda-zerkala.jpg';
+        break;
+
+      case 'Аренда дизельной тепловой пушки':
+        imgSrc = 'img/teplovaya-pushka.jpg';
+        break;
+      case 'Аренда инфракрасного обогревателя':
+        imgSrc = 'img/arenda-dop.oborydovaniya.jpg';
+        break;
+      case 'Аренда мобильного кондиционера':
+        imgSrc = 'img/arenda-mobilnogo-kondicionera.jpeg';
+        break;
+      case 'Аренда генератора':
+        imgSrc = 'img/arenda-generatora.jpg';
+        break;
       default:
         imgSrc = 'img/noimage.png';
     }
